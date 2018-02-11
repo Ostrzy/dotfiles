@@ -70,3 +70,8 @@
     key: mouse-over-hilite-stack
     type: bool
     value: true
+
+- name: ensure SSH key is generated
+  command: "ssh-keygen -t rsa -N '' -f /Users/{{ ansible_user }}/.ssh/id_rsa"
+  args:
+    creates: "/Users/{{ ansible_user }}/.ssh/id_rsa"

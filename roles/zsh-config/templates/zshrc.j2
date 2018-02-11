@@ -32,6 +32,11 @@ else
   export EDITOR='code'
 fi
 
+# Add key to the agent if not there
+if [[ `ssh-add -l` != *id_rsa* ]]; then 
+  ssh-add ~/.ssh/id_rsa
+fi
+
 # For rbenv to work
 eval "$(rbenv init -)"
 

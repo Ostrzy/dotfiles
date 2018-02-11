@@ -28,3 +28,5 @@ For local or secret settings, such as computer name, run `cp config.example.yml 
     - Mate Translate
     - Mosaic
     - Paste
+
+1. Add generated ssh key to appropriate services
