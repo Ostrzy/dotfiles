@@ -4,7 +4,7 @@
 
   vars_files:
     - "config.yml"
-  
+
   roles:
     - role: macos-config
     - role: homebrew-packages
@@ -14,3 +14,4 @@
     - role: global-packages
     - role: vscode-config
     - role: services
+    - role: store-apps

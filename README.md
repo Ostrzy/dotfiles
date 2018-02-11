@@ -5,6 +5,12 @@ To install them run `bin/setup.sh` script.
 
 For local or secret settings, such as computer name, run `cp config.example.yml config.yml` and fill in the variables.
 
+# App Store
+
+[MAS CLI](https://github.com/mas-cli/mas) is used to install apps from Mac App Store.
+Due to a [bug](https://github.com/mas-cli/mas/issues/107), signing in through CLI is currently impossible.
+Because of that, when user is not logged in, App Store is opened and manual sign in is required to proceed.
+
 # How to run
 
 `ansible-playbook macos.yml`

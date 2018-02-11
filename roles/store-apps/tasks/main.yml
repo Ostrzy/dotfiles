@@ -1,0 +1,24 @@
+---
+- name: Get App Store account status
+  command: 'mas account'
+  register: mas_account_result
+  changed_when: false
+  failed_when: false
+
+- name: Open App Store to log in
+  command: "open -a '/Applications/App Store.app'"
+  when: "mas_account_result.rc == 1"
+  
+- name: Wait for user to log in
+  command: "mas account"
+  register: "wait_mas_account_result"
+  until: "wait_mas_account_result.rc == 0"
+  delay: 5
+  retries: 100 
+  when: "mas_account_result.rc == 1"
+  
+- name: Install Mac App Store apps
+  command: "mas install {{ item }}"
+  register: mas_install_result
+  changed_when: "'already installed' not in mas_install_result.stdout"
+  with_items: "{{ installed_apps }}"

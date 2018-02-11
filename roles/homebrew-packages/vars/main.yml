@@ -12,6 +12,7 @@ installed_packages:
   - rbenv
   - ruby-build
   - zsh
+  - mas
 
 installed_cask_apps:
   - font-fira-code
