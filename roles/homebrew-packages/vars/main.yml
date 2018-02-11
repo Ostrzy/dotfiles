@@ -1,0 +1,23 @@
+---
+taps:
+  - homebrew/core
+  - homebrew/services
+  - caskroom/cask
+  - caskroom/fonts
+
+installed_packages:
+  - redis
+  - postgres
+  - nodenv
+  - rbenv
+  - ruby-build
+  - zsh
+
+installed_cask_apps:
+  - font-fira-code
+  - font-meslo-for-powerline
+  - visual-studio-code
+  - google-chrome
+  - omnifocus
+  - gitkraken
+  

@@ -1,0 +1,5 @@
+---
+extensions_installed:
+  - eamodio.gitlens
+  - kumar-harsh.graphql-for-vscode
+  - eg2.tslint

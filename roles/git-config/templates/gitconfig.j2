@@ -1,0 +1,19 @@
+[core]
+	excludesfile = /Users/Ostrzy/.gitignore_global
+	editor = code
+[user]
+	name = Michał Simka
+	email = michal.simka@ostrzy.net
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[branch]
+  autosetupmerge = true
+	autosetuprebase = always
+[push]
+	default = simple
+[rerere]
+	enabled = true
+[help]
+	autocorrect = 1

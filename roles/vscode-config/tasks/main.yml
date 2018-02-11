@@ -1,0 +1,11 @@
+---
+- name: Install extensions
+  command: "code --install-extension {{ item }}"
+  with_items: "{{ extensions_installed }}"
+  register: extension_install_result
+  changed_when: "'already installed' not in extension_install_result.stdout"
+
+- name: Generate config
+  template:
+    src: config.j2
+    dest: "/Users/{{ ansible_user }}/Library/Application Support/Code/User/settings.json"

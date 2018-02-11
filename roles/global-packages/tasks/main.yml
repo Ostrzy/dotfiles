@@ -1,0 +1,16 @@
+---
+- name: Install foreman
+  gem:
+    name: foreman
+    state: latest
+
+- name: Install Bundler
+  gem:
+    name: bundler
+    state: latest
+
+- name: Install Angular CLI
+  npm:
+    name: "@angular/cli"
+    global: yes
+    state: latest

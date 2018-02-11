@@ -1,0 +1,10 @@
+---
+node_versions:
+  - "8.9.4"
+
+global_node_version: "8.9.4"
+
+ruby_versions:
+  - "2.5.0"
+
+global_ruby_version: "2.5.0"

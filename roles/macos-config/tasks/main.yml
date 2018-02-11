@@ -1,0 +1,72 @@
+---
+- name: Set ComputerName
+  command: "scutil --set ComputerName {{ computer_name }}"
+  become: true
+  when: (computer_name is defined) and (ansible_hostname != computer_name)
+
+- name: Set HostName
+  command: "scutil --set HostName {{ computer_name }}"
+  become: true
+  when: (computer_name is defined) and (ansible_hostname != computer_name)
+
+- name: Set LocalHostName
+  command: "scutil --set LocalHostName {{ computer_name }}"
+  become: true
+  when: (computer_name is defined) and (ansible_hostname != computer_name)
+
+- name: "Set the NetBIOS name"
+  become: yes
+  osx_defaults:
+    domain: com.apple.smb.server
+    key: NetBIOSName
+    type: string
+    value: "{{ computer_name }}"
+  when: (computer_name is defined)
+
+- name: Disable "natural" scrolling
+  osx_defaults:
+    key: com.apple.swipescrolldirection
+    type: bool
+    value: false
+
+- name: Auto hide dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+
+- name: No delay on auto hiding dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide-delay
+    type: float
+    value: 0
+
+- name: Set animation time for auto hiding dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide-time-modifier
+    type: float
+    value: 1
+
+- name: Remove all persistent apps from dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: persistent-apps
+    type: array
+    value: []
+
+- name: Set icon size in dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    type: int
+    value: 36
+
+- name: Set highlight effect for dock items
+  osx_defaults:
+    domain: com.apple.dock
+    key: mouse-over-hilite-stack
+    type: bool
+    value: true

@@ -1,0 +1,31 @@
+---
+- name: Install needed node versions through nodenv
+  command: "nodenv install --skip-existing {{ item }}"
+  register: node_install_result
+  changed_when: "node_install_result.stdout != ''"
+  with_items: "{{ node_versions }}"
+    
+- name: Get current global node version
+  command: "nodenv global"
+  register: current_global_node
+  changed_when: false
+
+- name: Set global node version to {{ global_node_version }}
+  command: "nodenv global {{ global_node_version }} && nodenv rehash"
+  when: "global_node_version not in current_global_node.stdout"
+
+
+- name: Install needed ruby versions through rbenv
+  command: "rbenv install --skip-existing {{ item }}"
+  register: ruby_install_result
+  changed_when: "ruby_install_result.stdout != ''"
+  with_items: "{{ ruby_versions }}"
+
+- name: Get current global ruby version
+  command: "rbenv global"
+  register: current_global_ruby
+  changed_when: false
+
+- name: Set global ruby version to {{ global_ruby_version }}
+  command: "rbenv global {{ global_ruby_version }} && rbenv rehash"
+  when: "global_ruby_version not in current_global_ruby.stdout"

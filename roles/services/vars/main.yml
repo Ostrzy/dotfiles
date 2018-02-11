@@ -1,0 +1,4 @@
+---
+brew_services:
+  - postgresql
+  - redis

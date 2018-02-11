@@ -1,0 +1,10 @@
+---
+- name: Generate .gitconfig
+  template:
+    dest: "/Users/{{ ansible_user }}/.gitconfig"
+    src: gitconfig.j2
+    
+- name: Generate .gitignore_global
+  template:
+    dest: "/Users/{{ ansible_user }}/.gitignore_global"
+    src: gitignore_global.j2

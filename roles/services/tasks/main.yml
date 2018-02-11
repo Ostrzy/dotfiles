@@ -1,0 +1,6 @@
+---
+- name: Start brew serices
+  command: "brew services start {{ item }}"
+  register: brew_service_start_result
+  changed_when: "'already started' not in brew_service_start_result.stdout"
+  with_items: "{{ brew_services }}"

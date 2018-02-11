@@ -1,0 +1,16 @@
+---
+- name: Ensure taps are tapped
+  homebrew_tap:
+    name: "{{ item }}"
+  with_items: "{{ taps }}"
+
+- name: Install packages
+  homebrew:
+    name: "{{ item }}"
+  with_items: "{{ installed_packages }}"
+
+- name: Install cask apps
+  homebrew_cask:
+    name: "{{ item }}"
+  with_items: "{{ installed_cask_apps }}"
+
