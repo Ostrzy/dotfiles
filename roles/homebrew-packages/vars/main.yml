@@ -21,4 +21,6 @@ installed_cask_apps:
   - google-chrome
   - omnifocus
   - gitkraken
+  - java
+  - netbeans-java-se
   
