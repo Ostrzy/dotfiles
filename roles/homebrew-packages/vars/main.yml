@@ -22,5 +22,5 @@ installed_cask_apps:
   - omnifocus
   - gitkraken
   - java
-  - netbeans-java-se
+  - intellij-idea-ce
   
