@@ -1,16 +1,10 @@
 ---
-- name: Install foreman
-  gem:
-    name: foreman
-    state: latest
+- name: Upgrade pip
+  pip:
+    name: "pip"
+    state: "latest"
 
-- name: Install Bundler
-  gem:
-    name: bundler
-    state: latest
-
-- name: Install Angular CLI
-  npm:
-    name: "@angular/cli"
-    global: yes
-    state: latest
+- name: Install Django
+  pip:
+    name: "django"
+    state: "latest"

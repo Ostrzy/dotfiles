@@ -1,28 +1,55 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.fontSize": 13,
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true,
-    
-    "editor.tabSize": 2,
-    "editor.autoIndent": true,
-    "editor.minimap.enabled": false,
-    "editor.rulers": [120],
+  "editor.fontSize": 13,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.autoIndent": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    79
+  ],
 
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/dist": true
-    },
-    
-    "files.insertFinalNewline": true,
-    "files.autoSave": "afterDelay",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true
+  },
 
-    "terminal.integrated.fontFamily": "'Meslo LG M for Powerline'",
-    "terminal.integrated.shell.osx": "/bin/zsh",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "afterDelay",
 
-    "gitlens.blame.format": "${authorAgo}",
-    "gitlens.codeLens.enabled": false,
-    
-    "tslint.autoFixOnSave": true
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.statusBar.feedback.visible": false,
+
+  "terminal.integrated.fontFamily": "'Meslo LG M for Powerline'",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+
+  "gitlens.blame.format": "${authorAgo}",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.keymap": "chorded",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+
+  "tslint.autoFixOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  "python.pythonPath": "/usr/local/bin/python3",
+  "python.linting.pylintArgs": [
+    "--load-plugins=pylint_django"
+  ],
+
+  "[python]": {
+    "editor.tabSize": 4
+  }
 }

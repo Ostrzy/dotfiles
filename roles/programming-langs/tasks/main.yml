@@ -4,7 +4,7 @@
   register: node_install_result
   changed_when: "node_install_result.stdout != ''"
   with_items: "{{ node_versions }}"
-    
+
 - name: Get current global node version
   command: "nodenv global"
   register: current_global_node
@@ -14,18 +14,28 @@
   command: "nodenv global {{ global_node_version }} && nodenv rehash"
   when: "global_node_version not in current_global_node.stdout"
 
+- name: Fix problem with macOS python compilation
+  command: "sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /"
+  register: "headers_fix_result"
+  changed_when: "'Upgrading' not in headers_fix_result.stdout"
 
-- name: Install needed ruby versions through rbenv
-  command: "rbenv install --skip-existing {{ item }}"
-  register: ruby_install_result
-  changed_when: "ruby_install_result.stdout != ''"
-  with_items: "{{ ruby_versions }}"
+- name: Install needed python versions through pyenv
+  command: "pyenv install --skip-existing {{ item }}"
+  register: python_install_result
+  changed_when: "python_install_result.stdout != ''"
+  with_items: "{{ python_versions }}"
 
-- name: Get current global ruby version
-  command: "rbenv global"
-  register: current_global_ruby
+- name: Get current global python version
+  command: "pyenv global"
+  register: current_global_python
   changed_when: false
 
-- name: Set global ruby version to {{ global_ruby_version }}
-  command: "rbenv global {{ global_ruby_version }} && rbenv rehash"
-  when: "global_ruby_version not in current_global_ruby.stdout"
+- name: Set global python version to {{ global_python_version }}
+  command: "pyenv global {{ global_python_version }} && pyenv rehash"
+  when: "global_python_version not in current_global_python.stdout"
+
+- name: Install virtualenv plugin for pyenv
+  git:
+    repo: "https://github.com/pyenv/pyenv-virtualenv.git"
+    dest: "/Users/{{ ansible_user }}/.pyenv/plugins/pyenv-virtualenv"
+    update: no

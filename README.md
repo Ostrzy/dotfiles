@@ -8,7 +8,7 @@ For local or secret settings, such as computer name, run `cp config.example.yml 
 # App Store
 
 [MAS CLI](https://github.com/mas-cli/mas) is used to install apps from Mac App Store.
-Due to a [bug](https://github.com/mas-cli/mas/issues/107), signing in through CLI is currently impossible.
+Due to some [problems](https://github.com/mas-cli/mas/issues/164), signing in through CLI is currently impossible.
 Because of that, when user is not logged in, App Store is opened and manual sign in is required to proceed.
 
 # How to run
@@ -27,12 +27,16 @@ Because of that, when user is not logged in, App Store is opened and manual sign
 
 1. Install [Setapp](https://setapp.com/) and following apps with it:
     - Bartender
-    - ForkLift
+    - BusyCal
+    - CleanMyMac X
     - iStat Menus
-    - Lacona
     - Lungo
     - Mate Translate
     - Mosaic
     - Paste
+
+1. Configure SetApp apps
+    - For iStat Menus there are exported settings in `configurations/` folder
+    - Rest needs to be done manually
 
 1. Add generated ssh key to appropriate services

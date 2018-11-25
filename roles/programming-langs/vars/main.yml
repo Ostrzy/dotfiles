@@ -1,10 +1,11 @@
 ---
 node_versions:
-  - "8.9.4"
+  - "8.12.0"
+  - "10.13.0"
 
-global_node_version: "8.9.4"
+global_node_version: "10.13.0"
 
-ruby_versions:
-  - "2.5.0"
+python_versions:
+  - "3.7.1"
 
-global_ruby_version: "2.5.0"
+global_python_version: "3.7.1"

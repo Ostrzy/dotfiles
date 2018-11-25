@@ -9,18 +9,17 @@ installed_packages:
   - redis
   - postgres
   - nodenv
-  - rbenv
-  - ruby-build
+  - pyenv
   - zsh
   - mas
+  - yarn
 
 installed_cask_apps:
   - font-fira-code
   - font-meslo-for-powerline
   - visual-studio-code
-  - google-chrome
-  - omnifocus
-  - gitkraken
-  - java
-  - intellij-idea-ce
-  
+  - firefox
+  - sublime-merge
+  - slack
+  - setapp
+  - mailplane
