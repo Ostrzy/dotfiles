@@ -21,22 +21,24 @@ Because of that, when user is not logged in, App Store is opened and manual sign
 
 1. Add `Downloads` and `Applications` to Dock extras
 
-1. Set `Terminal.app` theme
-    - Download and run [`Monokai Pro (Filter Spectrum)`](https://github.com/lysyi3m/osx-terminal-themes#monokai-pro-filter-spectrum) theme file
-    - Change font to `Meslo LG M for Powerline`
+1. Import iTerm2 profile from `configurations/` folder
 
 1. Install [Setapp](https://setapp.com/) and following apps with it:
-    - Bartender
-    - BusyCal
-    - CleanMyMac X
-    - iStat Menus
-    - Lungo
-    - Mate Translate
-    - Mosaic
-    - Paste
+
+   - Bartender
+   - BusyCal
+   - CleanMyMac X
+   - iStat Menus
+   - Lungo
+   - Mate Translate
+   - Mosaic
+   - Paste
+   - SQLPro Studio
+   - PixelSnap
 
 1. Configure SetApp apps
-    - For iStat Menus there are exported settings in `configurations/` folder
-    - Rest needs to be done manually
+
+   - For iStat Menus there are exported settings in `configurations/` folder
+   - Rest needs to be done manually
 
 1. Add generated ssh key to appropriate services

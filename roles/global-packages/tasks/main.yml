@@ -1,10 +1,12 @@
 ---
-- name: Upgrade pip
-  pip:
-    name: "pip"
-    state: "latest"
+- name: Install Angular CLI
+  npm:
+    name: "@angular/cli"
+    global: yes
+    state: latest
 
-- name: Install Django
-  pip:
-    name: "django"
-    state: "latest"
+- name: Install Nest CLI
+  npm:
+    name: "@nestjs/cli"
+    global: yes
+    state: latest

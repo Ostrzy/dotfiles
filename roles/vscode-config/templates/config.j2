@@ -3,12 +3,14 @@
   "editor.fontSize": 13,
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "editor.autoIndent": true,
   "editor.minimap.enabled": false,
-  "editor.rulers": [
-    79
-  ],
+  "editor.rulers": [100],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
 
   "search.exclude": {
     "**/node_modules": true,
@@ -18,7 +20,7 @@
 
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "onFocusChange",
 
   "workbench.iconTheme": "vscode-icons",
   "workbench.statusBar.feedback.visible": false,
@@ -26,7 +28,7 @@
   "terminal.integrated.fontFamily": "'Meslo LG M for Powerline'",
   "terminal.integrated.shell.osx": "/bin/zsh",
 
-  "gitlens.blame.format": "${authorAgo}",
+  "gitlens.blame.format": "${author}, ${ago}",
   "gitlens.codeLens.enabled": false,
   "gitlens.keymap": "chorded",
   "gitlens.advanced.messages": {
@@ -39,17 +41,8 @@
     "suppressResultsExplorerNotice": false,
     "suppressShowKeyBindingsNotice": true
   },
-  "gitlens.historyExplorer.enabled": true,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
 
-  "tslint.autoFixOnSave": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-
-  "python.pythonPath": "/usr/local/bin/python3",
-  "python.linting.pylintArgs": [
-    "--load-plugins=pylint_django"
-  ],
-
-  "[python]": {
-    "editor.tabSize": 4
-  }
 }

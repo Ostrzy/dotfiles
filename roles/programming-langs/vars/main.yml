@@ -1,11 +1,5 @@
 ---
 node_versions:
-  - "8.12.0"
-  - "10.13.0"
+  - "14.5.0"
 
-global_node_version: "10.13.0"
-
-python_versions:
-  - "3.7.1"
-
-global_python_version: "3.7.1"
+global_node_version: "14.5.0"

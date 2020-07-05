@@ -1,7 +1,13 @@
 ---
 extensions_installed:
   - eamodio.gitlens
-  - kumar-harsh.graphql-for-vscode
-  - eg2.tslint
-  - ms-python.python
   - robertohuertasm.vscode-icons
+  - streetsidesoftware.code-spell-checker
+  - esbenp.prettier-vscode
+  - visualstudioexptteam.vscodeintellicode
+  - angular.ng-template
+  - johnpapa.angular2
+  - ashinzekene.nestjs
+  - abhijoybasak.nestjs-files
+  - CoenraadS.bracket-pair-colorizer-2
+  - aaron-bond.better-comments

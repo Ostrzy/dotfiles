@@ -9,10 +9,10 @@ installed_packages:
   - redis
   - postgres
   - nodenv
-  - pyenv
   - zsh
   - mas
   - yarn
+  - rabbitmq
 
 installed_cask_apps:
   - font-fira-code
@@ -22,4 +22,4 @@ installed_cask_apps:
   - sublime-merge
   - slack
   - setapp
-  - mailplane
+  - iterm2
